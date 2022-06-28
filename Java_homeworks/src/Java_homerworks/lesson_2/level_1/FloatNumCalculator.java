@@ -20,8 +20,6 @@ public class FloatNumCalculator {
 
         System.out.print("Please enter number 2: ");
         num2 = scanner.nextDouble();
-        System.out.println("num1: " + num1);
-        System.out.println("num2: " + num2);
 
         //Сверить с лекцией 2
         //Need to round?
@@ -29,6 +27,7 @@ public class FloatNumCalculator {
         substResult = num1 - num2;
         divideResult = num1 / num2;
         multResult = num1 * num2;
+
         System.out.println("\n");
         System.out.println("Below you can see calculation results");
         System.out.println("=================================");
