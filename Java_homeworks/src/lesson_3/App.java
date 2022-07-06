@@ -4,7 +4,9 @@ public class App {
     public static void main(String[] args) {
         Dog myDog = new Dog(); //object created. / constructor 1
         myDog.name = "John"; //добавляем свойство объекту
+        myDog.age = 1;
         myDog.speak();//вызвали метод
+        System.out.println("My dog age after two years will be " + myDog.yearsAfterTwoYears());
         //----------------
         System.out.println(myDog.name);
         //----------------

@@ -37,4 +37,7 @@ class Dog {
     void greetings() {
         System.out.println("hello, may name is: " + name);
     }
+    int yearsAfterTwoYears() {//метод возвращает значение
+        return age + 2;
+    }
 }

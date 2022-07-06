@@ -15,7 +15,7 @@ public class FloatNumCalculator {
 
         System.out.println("Welcome to simple calculator");
 
-        System.out.print("Please enter number 1: ");
+        System.out.print("Please enter franumber 1: ");
         num1 = scanner.nextDouble();
 
         System.out.print("Please enter number 2: ");
