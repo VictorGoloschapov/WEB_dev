@@ -12,5 +12,11 @@ public class Task6 {
 
         System.out.print("Введите целое число 2: ");
         number2 = input.nextInt();
+
+        if (number1 < number2) {
+            System.out.print("Ответ: " + number1);
+        } else if (number2 < number1) {
+            System.out.print("Ответ: " + number2);
+        }
     }
 }
