@@ -3,7 +3,7 @@ package Lesson_5;
 import java.util.Scanner;
 //loops while for do-while
 
-public class Lesson5 {
+public class Loops {
 
     public static void main(String[] args) {
         /*int i = 0;
