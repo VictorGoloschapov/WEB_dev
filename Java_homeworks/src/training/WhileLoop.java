@@ -2,11 +2,13 @@ package training;
 
 public class WhileLoop {
     public static void main(String[] args) {
-        int x = 10;
+        int x = 0;
 
-        while(x < 15) {
-            System.out.println("Value is: " + x);
-            x++;//инкремент обязателен
+        while(x < 4) {
+            x = x + 1;
+            System.out.println(x);
         }
+        System.out.println("=============");
+        System.out.println(x);
     }
 }

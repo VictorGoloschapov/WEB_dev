@@ -10,4 +10,4 @@ public class ArrayDefinition4 {
 1. [] поставил после int
 2. убрал слово new перед массивом
 3. вроде можно и так сделать? int[] numbers = new int[] {1, 2, 3}
- */
+*/

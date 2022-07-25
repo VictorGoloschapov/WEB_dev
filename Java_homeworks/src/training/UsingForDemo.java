@@ -2,13 +2,11 @@ package training;
 
 public class UsingForDemo {
     public static void main(String[] args) {
-        int s = 0;
-        int k;
-        int n = 10;
-        for(k = 1; k <= n; k++) {
-            s += k * k;
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                System.out.println(i + j);
+            }
         }
-        String txt = "Сумма квадратов чисел от 1 до " + n + ":" + s;
-        System.out.println(txt);
     }
 }

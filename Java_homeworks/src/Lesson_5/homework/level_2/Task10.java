@@ -10,7 +10,5 @@ public class Task10 {
         for (int element: numberList) {
             System.out.println(element);
         }
-
-
     }
 }
