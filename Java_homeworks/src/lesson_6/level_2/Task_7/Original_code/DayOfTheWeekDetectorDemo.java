@@ -1,6 +1,6 @@
-package training;
+package lesson_6.level_2.Task_7.Original_code;
 
-public class SwitchCase {
+public class DayOfTheWeekDetectorDemo {
     public static void main(String[] args) {
         int day = 1;
 
