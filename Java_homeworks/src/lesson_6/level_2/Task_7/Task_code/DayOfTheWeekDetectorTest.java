@@ -1,7 +1,5 @@
 package lesson_6.level_2.Task_7.Task_code;
 
-import lesson_6.level_2.Task_7.Task_code.DayOfTheWeekDetectorDemo;
-
 public class DayOfTheWeekDetectorTest {
     public static void main(String[] args) {
         findMonday();
