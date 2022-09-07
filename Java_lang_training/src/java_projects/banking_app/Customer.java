@@ -20,7 +20,7 @@ public class Customer implements SavingsAccount {
         this.phone = phone;
         this.balance = balance;
         transactions = new ArrayList<>(5);
-        addTransaction(String.format("Initial deposit - " + NumberFormat.getCurrencyInstance().format(balance) + " as on " + "%1$tD" + " at " + "%1$tT" + date));
+        addTransaction(String.format("Initial deposit - " +NumberFormat.getCurrencyInstance().format(balance)+" as on " + "%1$tD"+" at "+"%1$tT.",date));
     }
 
     public void update(Date date) {
@@ -53,5 +53,18 @@ public class Customer implements SavingsAccount {
             transactions.remove(5);
             transactions.trimToSize();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", balance=" + balance +
+                ", transactions=" + transactions +
+                '}';
     }
 }

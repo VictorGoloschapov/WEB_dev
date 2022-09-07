@@ -28,6 +28,7 @@ public class Bank {
             System.out.println("2. Login.");
             System.out.println("3. Update accounts.");
             System.out.println("4. Exit.");
+            System.out.print("\nEnter your choice: ");
             choice = input.nextInt();
             input.nextLine();
             switch (choice) {
@@ -41,13 +42,43 @@ public class Bank {
                     System.out.print("Set username: ");
                     username = input.next();
 
+                    while (bank.customerMap.containsKey(username)) {
+                        System.out.println("Username already exists. Set again: ");
+                        username = input.next();
+                    }
 
+                    System.out.println("Set a password (minimum 8 chars; minimum 1 digit, 1 lowercase, 1 uppercase, 1 special character[!@#$%^&*_]) :");
+                    password = input.next();
+                    input.nextLine();
+
+                    while (!password.matches((("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_]).{8,}")))) {
+                        System.out.println("Invalid password condition. Set again: ");
+                        password = input.next();
+                    }
+
+                    System.out.print("Enter initial deposit : ");
+
+                    while(!input.hasNextDouble())
+                    {
+                        System.out.println("Invalid amount. Enter again :");
+                        input.nextDouble();
+                    }
+                    amount=input.nextDouble();
+
+                    System.out.println("amount: " + amount);
+
+                    customer = new Customer(username, password, name, address, phone, amount, new Date());
+                    bank.customerMap.put(username, customer);
+                    System.out.println(bank.customerMap);
                     break;
                 case 2:
+                    System.out.println("Option 2 chose");
                     break;
                 case 3:
+                    System.out.println("Option 3 chose");
                     break;
                 case 4:
+                    System.out.println("Bye");
                     break;
                 default:
                     System.out.println("Wrong choice !");
