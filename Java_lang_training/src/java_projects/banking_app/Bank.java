@@ -19,7 +19,8 @@ public class Bank {
         int choice;
         Bank bank = new Bank();
 
-        outer:while (true) {
+        outer:
+        while (true) {
             System.out.println("\n---------------------");
             System.out.println("BANK    OF    JAVA");
             System.out.println("---------------------\n");
@@ -31,6 +32,16 @@ public class Bank {
             input.nextLine();
             switch (choice) {
                 case 1:
+                    System.out.print("Enter name: ");
+                    String name = input.nextLine();
+                    System.out.print("Enter address: ");
+                    String address = input.nextLine();
+                    System.out.print("Enter contact phone: ");
+                    String phone = input.nextLine();
+                    System.out.print("Set username: ");
+                    username = input.next();
+
+
                     break;
                 case 2:
                     break;

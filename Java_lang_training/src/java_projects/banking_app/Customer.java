@@ -8,11 +8,11 @@ public class Customer implements SavingsAccount {
     String password;
     String name;
     String address;
-    int phone;
+    String phone;
     double balance;
     ArrayList<String> transactions;
 
-    public Customer(String username, String password, String name, String address, int phone, double balance, Date date) {
+    public Customer(String username, String password, String name, String address, String phone, double balance, Date date) {
         this.username = username;
         this.password = password;
         this.name = name;
