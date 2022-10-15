@@ -147,10 +147,19 @@ public class Bank {
                     }
                     break;
                 case 3:
-                    System.out.println("Option 3 chose");
+                    System.out.print("Enter payee username: ");
+                    username = input.next();
+                    input.nextLine();
+
+                    if (bank.customerMap.containsKey(username)) {
+                        bank.customerMap.get(username).update(new Date());
+                    } else {
+                        System.out.print("User does not exist");
+                    }
                     break;
                 case 4:
-                    System.out.println("Bye");
+                    System.out.println("\nThank you for choosing Bank Of Java");
+                    System.exit(1);
                     break;
                 default:
                     System.out.println("Wrong choice !");
