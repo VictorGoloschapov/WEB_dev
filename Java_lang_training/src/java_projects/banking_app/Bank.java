@@ -15,7 +15,7 @@ public class Bank {
         Customer customer;
         String username;
         String password;
-        double amount;
+        double amount = 0;
         int choice;
         Bank bank = new Bank();
 
@@ -58,12 +58,11 @@ public class Bank {
 
                     System.out.print("Enter initial deposit : ");
 
-                    while(!input.hasNextDouble())
-                    {
+                    while (!input.hasNextDouble()) {
                         System.out.println("Invalid amount. Enter again :");
                         input.nextDouble();
                     }
-                    amount=input.nextDouble();
+                    amount = input.nextDouble();
 
                     System.out.println("amount: " + amount);
 
@@ -72,7 +71,80 @@ public class Bank {
                     System.out.println(bank.customerMap);
                     break;
                 case 2:
-                    System.out.println("Option 2 chose");
+                    System.out.println("Enter username: ");
+                    username = input.next();
+                    input.nextLine();
+                    System.out.println("Enter password: ");
+                    password = input.next();
+                    input.nextLine();
+
+                    if (bank.customerMap.containsKey(username)) {
+                        customer = bank.customerMap.get(username);
+                        if (password.equals(customer.password)) {
+                            while (true) {
+                                System.out.println("\n----------------");
+                                System.out.println("W E L C O M E");
+                                System.out.println("1. Deposit.");
+                                System.out.println("2. Transfer.");
+                                System.out.println("3. Last 5 transactions");
+                                System.out.println("4. User information");
+                                System.out.println("5. Log out");
+                                System.out.println("\nEnter your choice: ");
+                                choice = input.nextInt();
+                                input.nextLine();
+
+                                switch (choice) {
+                                    case 1:
+                                        System.out.println("Enter amount: ");
+                                        while (!input.hasNextDouble()) {
+                                            System.out.println("Invalid amount. Enter again: ");
+                                            input.nextLine();
+                                        }
+                                        amount = input.nextDouble();
+                                        input.nextLine();
+                                        customer.deposit(amount, new Date());
+                                        break;
+                                    case 2:
+                                        System.out.print("Enter payee username: ");
+                                        username = input.next();
+                                        input.nextLine();
+                                        System.out.println("Enter amount: ");
+                                        while (input.hasNextDouble()) {
+                                            input.nextLine();
+                                        }
+
+                                        if (amount > 300000) {
+                                            System.out.println("Transfer limit exceeded. Please contact bank manager");
+                                            break;
+                                        }
+
+                                        if (bank.customerMap.containsKey(username)) {
+                                            Customer payee = bank.customerMap.get(username);
+                                            payee.deposit(amount, new Date());
+                                            customer.withdraw(amount, new Date());
+                                        } else {
+                                            System.out.println("Username does not exist");
+                                        }
+                                        break;
+                                    case 3:
+                                        for (String transaction : customer.transactions) {
+                                            System.out.println(transaction);
+                                        }
+                                        break;
+                                    case 4:
+                                        System.out.println("Account holder name: " + customer.name);
+                                        System.out.println("Account holder address: " + customer.address);
+                                        System.out.println("Account holder phone: " + customer.phone);
+                                        System.out.println("Account holder username: " + customer.username);
+                                        break;
+                                    case 5:
+                                        continue outer;
+                                    default:
+                                        System.out.println("Wrong choice!");
+                                }
+                            }
+                        }
+                    }
                     break;
                 case 3:
                     System.out.println("Option 3 chose");
