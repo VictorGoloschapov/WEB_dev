@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aos.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="style.css">
+    <!--favicon / https://realfavicongenerator.net/-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#004af2">
+    <meta name="msapplication-TileColor" content="#004af2">
+    <meta name="theme-color" content="#004af2">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CenterLogistic</title>
+</head>
+<body>
+
+    <div class="page">
+        <!--header-->
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner"><!--header__inner будет flex box контейнер-->
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="center logistic">
+                    </a>
+
+
+                    <nav class="nav" id="nav">
+                        <a class="nav__link" href="index.html">Home page </a>
+                        <a class="nav__link" href="blog.html">Blog</a>
+                        <a class="nav__link" href="text.html">Privacy Policy</a>
+                        <a class="nav__link active" href="text2.html">Terms &amp; Conditions</a>
+                    </nav>
+
+                    <!--Burger menu-->
+                    <button class="burger" type="button" id="navToggle">
+                        <span class="burger_line">1</span>
+                        <span class="burger_line">2</span>
+                        <span class="burger_line">3</span>
+                        <span class="burger_line">4</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!--Intro-->
+        <div class="intro intro--text" id="intro"></div>
+
+        <!--Text-->
+        <section class="section section--last">
+            <div class="container">
+                <h1 class="section__title"><span>Terms</span> &amp; Conditions</h1>
+                <div class="text">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy).</p>
+
+                    <h3>Some subtitle</h3>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, remaining essentially unchanged. It was popularised in the 1960s.
+                    </p>
+
+                    <ul>
+                        <li>unordered list item</li>
+                        <li>unordered list item</li>
+                    </ul>
+
+                    <h4>Some subtitle</h4>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                    </p>
+
+                    <ol>
+                        <li>ordered list item</li>
+                        <li>ordered list item</li>
+                    </ol>
+                </div><!--/.text-->
+                <a class="btn btn--orange" href="index.html"><span>Back to home</span></a>
+            </div><!--/.container-->
+        </section>
+
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+                <img src="img/logo_black.svg" alt="center logistic">
+                <address class="footer_contacts">
+                    <p>New York, Street, ZIP code</p>
+                    <p>Call Us: <a href="tel:+9948373123">+9948373123</a> or E-mail: <a href="mailto:hello@centerlogistic.com">hello@centerlogistic.com</a></p>
+                </address>
+                <nav class="footer_nav">
+                    <a href="text2.html">Terms &amp; Conditions</a>
+                    <a href="text.html">Privacy Policy</a>
+                    <a href="blog.html">Our Blog</a>
+                </nav>
+            </div>
+
+        </footer>
+    </div><!--/.page-->
+    <!--Javascript // сначала идет Jquery библиотека, потом мои JS файлы-->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.slim.min.js"></script>
+    <script src="script/aos.js"></script>
+    <script src="script/slick.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
