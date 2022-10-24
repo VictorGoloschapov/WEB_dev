@@ -1,0 +1,67 @@
+body {
+    font-family: '', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.btn-reset {
+    padding: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-SemiBold.woff') format('woff');
+	font-display: swap;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*Header
+=====================*/
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Hero
+=====================*/
+.hero {
+    padding-top: 100px;
+
+    background: url("../img/hero-bg.jpg") center no-repeat;
+    background-size: cover;
+}
