@@ -57,6 +57,20 @@ img {
     width: 100%;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger {
+    height: 40px;
+    width: 40px;
+
+    background-color: #F5F6F7;
+
+    border-radius: 100%;
+}
+
 /*Hero
 =====================*/
 .hero {
