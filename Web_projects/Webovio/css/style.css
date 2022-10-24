@@ -55,20 +55,46 @@ img {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 24px 0;
 }
 
 .header-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .burger {
+    --offset-horizontal: 11px;
+    --offset-vertical: 14px;
+    position: relative;
     height: 40px;
     width: 40px;
+    padding: var(--offset-vertical) var(--offset-horizontal);
 
     background-color: #F5F6F7;
 
     border-radius: 100%;
+}
+
+.burger-line {
+    position: absolute;
+    left: 50%;
+    top: var(--offset-vertical);
+    display: inline-block;
+    height: 2px;
+    width: calc(100% - (var(--offset-horizontal) * 2));
+    transform: translateX(-50%);
+
+    background-color: #000;
+}
+
+.burger-line:nth-child(2) {
+    top: calc(var(--offset-vertical) + 6px)
+}
+
+.burger-line:nth-child(3) {
+    top: calc(var(--offset-vertical) + 12px)
 }
 
 /*Hero
