@@ -9,6 +9,16 @@
     <title>Webovio</title>
 </head>
 <body>
+    <!--svg sprite-->
+    <svg style="display: none;">
+        <symbol id="arrow-fill-right" viewBox="0 0 16 16">
+            <g>
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </g>
+
+        </symbol>
+    </svg>
+
     <div class="header">
         <div class="container header-container">
             <a href="#" class="logo">
@@ -28,7 +38,12 @@
                     <span class="hero-subtitle">A place where</span>
                     <h1 class="hero-title">A creative agency for redemptive brands</h1>
                     <p class="hero-descr">Anteelo is a leading strategic design firm that builds powerful digital solutions for startups and enterprises.</p>
-                    <a href="#" class="hero-link link">Get in touch</a>
+                    <a href="#" class="hero-link link">
+                        <svg class="right-arrow">
+                            <use xlink:href="#arrow-fill-right"></use>
+                        </svg>
+                        <span>Get in touch</span>
+                    </a>
                 </div>
             </div>
         </section>

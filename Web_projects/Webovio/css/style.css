@@ -12,6 +12,14 @@ body {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
 img {
     max-width: 100%;
 }
@@ -42,6 +50,7 @@ img {
 	font-weight: 400;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Poppins';
 	src: url('../fonts/Poppins-Medium.woff') format('woff');
@@ -49,6 +58,7 @@ img {
 	font-weight: 500;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Poppins';
 	src: url('../fonts/Poppins-Bold.woff') format('woff');
@@ -63,6 +73,38 @@ img {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.link {
+    display: inline-flex;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    color: #D4D6D4;
+
+    transition: color 0.3s ease-in-out;
+}
+
+.right-arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+
+    transform: translateY(2px);
+
+    fill: currentColor;
+}
+
+.link span {
+    text-indent: 8px;
+    border-bottom: 1px solid currentColor;
+}
+
+.link:hover {
+    color: #FFD723;
+}
+
 
 /*Header
 =====================*/
@@ -116,8 +158,44 @@ img {
 /*Hero
 =====================*/
 .hero {
-    padding-top: 100px;
+    padding-top: 189px;
+    padding-bottom: 210px;
 
     background: url("../img/hero-bg.jpg") center no-repeat;
     background-size: cover;
 }
+
+.hero-content {
+    max-width: 616px;
+    width: 100%;
+    color: #fff;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    margin-bottom: 22px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.hero-title {
+    margin-bottom: 24px;
+
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 74px;
+}
+.hero-descr {
+    margin-bottom: 45px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.hero-link {
+    color: #FFD723;
+}
+
