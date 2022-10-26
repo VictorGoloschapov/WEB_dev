@@ -57,7 +57,7 @@ hr {
     min-height: 820px;
     position: relative;
 
-    background: #31344e url(images/intro.jpg) center no-repeat;
+    background: #31344e url(../images/intro.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -352,7 +352,7 @@ hr {
 .section--map {
     padding: 40px 0;
 
-    background: #e6e6e6 url("images/map-bg.jpg") center no-repeat;
+    background: #e6e6e6 url("../images/map-bg.jpg") center no-repeat;
     background-size: cover;
 }
 
