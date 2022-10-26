@@ -446,6 +446,7 @@ img {
 .social-link:hover:hover {
     background-color: #FFD723;
 }
+
 .social-link:hover .social_icon {
     fill: #fff
 }
@@ -462,3 +463,123 @@ img {
     line-height: 21px;
     color: #B5C096;
 }
+
+@media (max-width: 992px) {
+    .services-list {
+        gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-subtitle,
+    .services-descr {
+        max-width: none;
+    }
+
+    .footer-middle {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-middle:before {
+        display: none;
+    }
+
+    .footer-column:last-child::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .get-started-title {
+        font-size: 55px;
+        line-height: 65px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding-bottom: 160px;
+
+    }
+
+    .hero-title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .services {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .services-list {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .get-started {
+        width: 100%;
+    }
+
+    .get-started-title {
+        font-size: 42px;
+        line-height: 54px;
+    }
+
+    .link {
+        line-height: 1;
+    }
+
+    .footer-middle {
+        --grid-gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-contacts-item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .hero {
+        padding: 140px 0;
+    }
+    .logo {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .services-title {
+        margin-bottom: 35px;
+    }
+
+    .footer {
+        padding-top: 260px;
+    }
+
+    .footer-mail {
+        font-size: 20px;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+}
+
