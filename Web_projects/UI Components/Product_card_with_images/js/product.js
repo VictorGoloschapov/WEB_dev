@@ -17,14 +17,14 @@ function createProductItemList() {
 function createImagePaginationChange(currentProduct, imageSwitchItems, imagePagination) {
     if (imageSwitchItems.length > 1) {
         imageSwitchItems.forEach((el, index) => {
-            addPaginationItemToList(el, index, imagePagination);
+            addPaginationItemToHTML(el, index, imagePagination);
             makePaginationItemActive(el, currentProduct);
             makeFirstPaginationItemActive(el, currentProduct);
         });
     }
 }
 
-function addPaginationItemToList(el, index, imagePagination) {
+function addPaginationItemToHTML(el, index, imagePagination) {
     el.setAttribute("data-index", index);
     imagePagination.innerHTML += `<li class="image-pagination__item ${index == 0 ? "image-pagination__item--active" : ""}" data-index="${index}"></li>`;
 }
@@ -39,7 +39,7 @@ function makePaginationItemActive(el, currentProduct) {
 }
 
 function makeFirstPaginationItemActive(el, currentProduct) {
-    el.addEventListener('mouseleave', (e) => {
+    el.addEventListener('mouseleave', () => {
         currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {
             el.classList.remove("image-pagination__item--active");
         });
