@@ -1,3 +1,10 @@
 @import 'global.css';
 @import 'normalize.css';
 @import 'product.css';
+
+.container {
+    width: 100%;
+    max-width: 1234px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
