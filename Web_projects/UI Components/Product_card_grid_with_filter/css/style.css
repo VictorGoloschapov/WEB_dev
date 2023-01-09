@@ -36,3 +36,9 @@
     top: 20px;
     left: 0;
 }
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
