@@ -140,7 +140,7 @@ body {
 	background-color: #c4c4c4;
 }
 
-.image-pagination__item-active {
+.image-pagination__item--active {
 	background-color: var(--color-accent);
 }
 
