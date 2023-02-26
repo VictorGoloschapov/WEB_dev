@@ -38,6 +38,9 @@ const tasks = [
     return acc;
   }, {})
 
+  //Elements UI
+  let listContainer = document.querySelector(".tasks-list-section .list-group", );
+
   renderAllTasks(objectOfTasks);
 
 
@@ -52,10 +55,31 @@ const tasks = [
     let fragment = document.createDocumentFragment();
     Object.values(tasksList).forEach(task => {
       let li = listItemTemlapte(task);
+      fragment.appendChild(li);
     });
+    listContainer.appendChild(fragment);
   }
 
   function listItemTemlapte({_id, title, body} = {}) {
-    console.log(_id, title);
+    let li = document.createElement("li");
+    li.classList.add('list-group-item', 'd-flex', 'align-items-center', 'flex-wrap', 'mt-2');
+
+    let span = document.createElement("span");
+    span.textContent = title;
+    span.style.fontWeight = "bold";
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.classList.add('btn', 'btn-danger', 'ml-auto', 'delete-btn');
+    deleteBtn.textContent = "Delete task";
+
+    let article = document.createElement("p");
+    article.textContent = body;
+    article.classList.add('mt-2', 'w-100');
+
+    li.appendChild(span);
+    li.appendChild(deleteBtn);
+    li.appendChild(article);
+
+    return li;
   }
 })(tasks);
