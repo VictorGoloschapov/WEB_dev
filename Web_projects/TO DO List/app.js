@@ -38,5 +38,24 @@ const tasks = [
     return acc;
   }, {})
 
-  console.log(objectOfTasks);
+  renderAllTasks(objectOfTasks);
+
+
+  //display all task on page
+  function renderAllTasks(tasksList) {
+    if (!tasksList) {
+      console.error("Передайте список задач");
+      return;
+    }
+
+    //create html fragment
+    let fragment = document.createDocumentFragment();
+    Object.values(tasksList).forEach(task => {
+      let li = listItemTemlapte(task);
+    });
+  }
+
+  function listItemTemlapte({_id, title, body} = {}) {
+    console.log(_id, title);
+  }
 })(tasks);
