@@ -105,16 +105,20 @@ const tasks = [
     },
   };
 
+  let lastSelectedTheme = "default";
+
   //Elements UI
   let listContainer = document.querySelector(".tasks-list-section .list-group", );
   let form = document.forms["addTask"];
   let inputTitle = form.elements["title"];
   let inputBody = form.elements["body"];
+  let themeSelect = document.getElementById("themeSelect");
 
   //events
   renderAllTasks(objectOfTasks);
   form.addEventListener("submit", onFormSubmitHandler);
   listContainer.addEventListener("click", onDeleteHandler);
+  themeSelect.addEventListener("change", onThemeSelectHandler);
 
   //display all task on page
   function renderAllTasks(tasksList) {
@@ -213,5 +217,25 @@ const tasks = [
       return;
     }
       el.remove();
+  }
+
+  function onThemeSelectHandler(e) {
+    let selectedTheme = themeSelect.value;
+    let isConfirmed = confirm(`Выдействительно хотите изменить тему на: ${selectedTheme}?`);
+
+    if (!isConfirmed) {
+      themeSelect.value = lastSelectedTheme;
+      return ;
+    }
+
+    setTheme(selectedTheme);
+    lastSelectedTheme = selectedTheme;
+  }
+
+  function setTheme(name) {
+    let selectedThemeObject = themes[name];
+    Object.entries(selectedThemeObject).forEach(([key, value]) => {
+      document.documentElement.style.setProperty(key, value);
+    })
   }
 })(tasks);
