@@ -41,8 +41,13 @@ const tasks = [
   //Elements UI
   let listContainer = document.querySelector(".tasks-list-section .list-group", );
 
-  renderAllTasks(objectOfTasks);
+  let form = document.forms["addTask"];
+  let inputTitle = form.elements["title"];
+  let inputBody = form.elements["body"];
 
+  //events
+  renderAllTasks(objectOfTasks);
+  form.addEventListener("submit", onFormSubmitHandler);
 
   //display all task on page
   function renderAllTasks(tasksList) {
@@ -81,5 +86,37 @@ const tasks = [
     li.appendChild(article);
 
     return li;
+  }
+
+  function onFormSubmitHandler(e) {
+    e.preventDefault();
+    let titleValue = inputTitle.value;
+    let bodyValue = inputBody.value;
+
+    if (!titleValue || !bodyValue) {
+      alert("Пожалуйста введите заголовок и задачу");
+      return;
+    }
+
+    let task = createNewTask(titleValue, bodyValue);
+    let listItem = listItemTemlapte(task);
+
+    listContainer.insertAdjacentElement("afterbegin", listItem);
+    form.reset();
+  }
+
+  function createNewTask(title, body) {
+    let newTask = {
+      title,
+      body,
+      completed: false,
+      _id: `task-${Math.random()}`,
+    };
+
+    //delete test
+    console.log(newTask);
+
+    objectOfTasks[newTask._id] = newTask;
+    return {...newTask};
   }
 })(tasks);
