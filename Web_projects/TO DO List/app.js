@@ -32,7 +32,7 @@ const tasks = [
 ];
 
 (function(arrOfTasks) {
-  //transfer array to object of objects
+  //transfer array "tasks" to object of objects "objectOfTasks"
   let objectOfTasks = arrOfTasks.reduce((acc, task) => {
     acc[task._id] = task;
     return acc;
@@ -40,7 +40,6 @@ const tasks = [
 
   //Elements UI
   let listContainer = document.querySelector(".tasks-list-section .list-group", );
-
   let form = document.forms["addTask"];
   let inputTitle = form.elements["title"];
   let inputBody = form.elements["body"];
@@ -48,6 +47,7 @@ const tasks = [
   //events
   renderAllTasks(objectOfTasks);
   form.addEventListener("submit", onFormSubmitHandler);
+  listContainer.addEventListener("click", onDeleteHandler);
 
   //display all task on page
   function renderAllTasks(tasksList) {
@@ -58,6 +58,7 @@ const tasks = [
 
     //create html fragment
     let fragment = document.createDocumentFragment();
+
     Object.values(tasksList).forEach(task => {
       let li = listItemTemlapte(task);
       fragment.appendChild(li);
@@ -68,6 +69,7 @@ const tasks = [
   function listItemTemlapte({_id, title, body} = {}) {
     let li = document.createElement("li");
     li.classList.add('list-group-item', 'd-flex', 'align-items-center', 'flex-wrap', 'mt-2');
+    li.setAttribute("data-task-id", _id);
 
     let span = document.createElement("span");
     span.textContent = title;
@@ -113,10 +115,36 @@ const tasks = [
       _id: `task-${Math.random()}`,
     };
 
-    //delete test
-    console.log(newTask);
-
     objectOfTasks[newTask._id] = newTask;
     return {...newTask};
+  }
+
+  //delete tasks
+  function onDeleteHandler(e) {
+    if (e.target.classList.contains("delete-btn")) {
+      let parent = e.target.closest('[data-task-id]');
+      let id = parent.dataset.taskId;
+      let confirmed = deleteTask(id);
+      deleteTaskHtml(confirmed, parent);
+    }
+  }
+
+  function deleteTask(id) {
+    let {title} = objectOfTasks[id]
+    let isConfirm = confirm(`Точно вы хотите удалить задачу: ${title}`);
+
+    if (!isConfirm) {
+      return isConfirm;
+    }
+
+    delete objectOfTasks[id];
+    return isConfirm;
+  }
+
+  function deleteTaskHtml(confirmed, el) {
+    if (!confirmed) {
+      return;
+    }
+      el.remove();
   }
 })(tasks);
