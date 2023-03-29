@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+header > h1 {
+    border-bottom: 1px dashed #000;
+    font-style: italic;
+    font-size: x-large;
+}
+
+table {
+    border-spacing: 5px;
+    width: 530px;
+}
+
+th {
+    color: #fff;
+    background-color: #000;
+    text-align: left;
+}
+
+td {
+    border-bottom: 1px solid #000;
+    padding: 3px;
+    background: #f0f0f0;
+    text-align: left;
+    vertical-align: top;
+}
+
+p#err_msg {
+    color: #f00;
+    font-weight: bold;
+}
+
+footer > p {
+    border-top: 1px dashed #000;
+    font-style: italic;
+}
+
