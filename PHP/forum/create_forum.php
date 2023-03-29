@@ -16,4 +16,4 @@ if ($dbc->query($sql)) {
     echo "Ошибка: " . $dbc->error;
 }
 
-$dbc->close();00
+$dbc->close();
