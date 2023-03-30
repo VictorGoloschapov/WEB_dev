@@ -5,9 +5,9 @@ include ("includes/header.html");
 ("connect_db.php");
 
 echo '<div style="padding: 0 10px;">
-    <form action="process.php" method="POST" accept-charset="utf-8>
-        Имя: <input name="first_name" type="text">
-        Фамилия: <input name="last_name" type="text">
+    <form action="process.php" method="POST" accept-charset="utf-8">
+        <label>Имя:</label> <input name="first_name" type="text">
+        <label>Фамилия:</label> <input name="last_name" type="text">
         <p>Тема:<br>
         <input name="subject" type="text" size="64"></p>
         <p>Сообщение</p>
