@@ -3,10 +3,10 @@
  * Engine v1.0
  * author Victor Goloschapov
  * =========================
- * Find opened pges by GET method
+ * Find opened pages by GET method
  * log errors
  * return opened pages
- * generates page title
+ * generate page title
  */
 
 include_once "init.php";
@@ -22,6 +22,7 @@ class Engine {
             $this->_pageFile = str_replace("", "null", $_GET['page']);
 
            var_dump($this->_pageFile);
+           var_dump($_GET);
 
             $this->isTemplateExists();
         } else {
