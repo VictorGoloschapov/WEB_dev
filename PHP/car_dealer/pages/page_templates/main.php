@@ -1,0 +1,2 @@
+<h1>Main content</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus odit beatae porro possimus iste rerum illum, ex numquam odio delectus voluptatibus eum ut sunt culpa corporis eius magnam reiciendis veniam.</p>

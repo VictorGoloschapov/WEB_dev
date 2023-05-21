@@ -1,5 +1,3 @@
 <?php
-
-echo "car selling portal in process";
-
+include_once "core/core.php";
 ?>
