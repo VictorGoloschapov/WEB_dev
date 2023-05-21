@@ -8,8 +8,6 @@
  * return opened pages
  * generate page title
  */
-
-include_once "init.php";
 class Engine {
     private $_pageFile = null;
     private $_error = null;

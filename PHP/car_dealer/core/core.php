@@ -1,9 +1,9 @@
 <?php
 
+include_once "init.php";
 include_once "class_engine.php";
 $engine = new Engine();
 
-include_once "init.php";
 include_once "pages/header.php";
 
 if ($engine->getError()) {
