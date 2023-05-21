@@ -27,9 +27,21 @@
             <div class="logo_subtitle">mazlietotu auto tirdzniecība</div>
           </div>
           <nav class="nav" id="nav">
-            <a class="nav_link active active-mobile" href="?page=main">Sākums</a>
-            <a class="nav_link" href="?page=contacts">Auto pasūtīšana</a>
-            <a class="nav_link" href="?page=used_cars_search">Mazlietoti auto </a>
+            <?php if ($engine->getPageFile() == "main"): ?>
+              <a class="nav_link active active-mobile" href="?page=main">Sākums</a>
+            <?php else: ?>
+              <a class="nav_link" href="?page=main">Sākums</a>
+            <?php endif; ?>
+            <?php if ($engine->getPageFile() == "contacts"): ?>
+              <a class="nav_link active active-mobile" href="?page=contacts">Auto pasūtīšana</a>
+            <?php else: ?>
+              <a class="nav_link" href="?page=contacts">Auto pasūtīšana</a>
+            <?php endif; ?>
+            <?php if ($engine->getPageFile() == "used_cars_search"): ?>
+              <a class="nav_link active active-mobile" href="?page=used_cars_search">Mazlietoti auto </a>
+            <?php else: ?>
+              <a class="nav_link" href="?page=used_cars_search">Mazlietoti auto </a>
+            <?php endif; ?>
           </nav>
           <!--Burger menu-->
           <button class="burger" type="button" id="navToggle">
