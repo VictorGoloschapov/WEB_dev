@@ -1,10 +1,10 @@
 <?php
 
 include_once "class_engine.php";
-$engine = new Engine();
 include_once "init.php";
-
 include_once "pages/header.php";
+
+$engine = new Engine();
 
 if ($engine->getError()) {
     echo "<div style='border:1px solid red;padding:10px;margin: 10px auto;
