@@ -1,5 +1,13 @@
 <?php
 
+//css style location
+$fileLocationPath = array(
+    "css" =>  dirname("assets/css/main.css"),
+    "js" => dirname("assets/js/script.js"),
+    "images" => dirname("assets/images/"),
+);
+
+//page titles
 $pageTitles = array(
     "main" => "About us",
     "contacts" => "Contacts",
@@ -8,6 +16,6 @@ $pageTitles = array(
 
 // $url = $_SERVER['REQUEST_URI'];
 
-// var_dump($url);
+// var_dump($fileLocationPath);
 
 ?>

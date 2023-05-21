@@ -1,9 +1,10 @@
+
 <div id="intro" class="intro">
     <div class="container">
       <div class="intro_inner">
         <h1 class="intro_inner_title" data-aos="fade-down" data-aos-delay="200">Palīdzēsim atrast ideālo auto </h1>  `
         <h2 class="intro_inner_subtitle"  data-aos="fade-down" data-aos-delay="100">Kvalitatīvi auto. Labākās cenas</h2>
-        <a class="btn" href="lietoti_am.html" data-aos="fade-down">Uzzināt vairāk</a>
+        <a class="btn" href="?page=contacts" data-aos="fade-down">Uzzināt vairāk</a>
       </div>
      </div><!--/.container-->
   </div>
@@ -61,7 +62,9 @@
             </div>
           </div>
           <div class="our_services_inner_col_item" data-aos="fade-left">
-            <img class="col_item_img" src="IMG/services_v2.jpg">
+            <img class="col_item_img" src="assets/images/services_v2.jpg" alt="car image">
+          <!--"/images/services_v2.jpg"-->
+
           </div>
         </div><!--/.our_services_inner_col-->
       </div><!--/.our_services_inner-->

@@ -183,7 +183,7 @@ p {
   padding-top: 100px;
 
   background-color: #000;
-  background: url(img/pexels-albin-berlin-919073_v6.jpg) center no-repeat;
+  background: url(../images/pexels-albin-berlin-919073_v6.jpg) center no-repeat;
   background-size: cover;
 }
 .intro_inner {
@@ -358,7 +358,7 @@ p {
 ================*/
 footer {
   background-color: #000;
-  background: url(img/footer_img_v6.jpg) center no-repeat;
+  background: url(../images/footer_img_v6.jpg) center no-repeat;
   background-size: cover;
 }
 .footer_inner {

@@ -22,7 +22,7 @@ class Engine {
             $this->_pageFile = str_replace("", "null", $_GET['page']);
 
            var_dump($this->_pageFile);
-           var_dump($_GET);
+        //    var_dump($_GET);
 
             $this->isTemplateExists();
         } else {
@@ -38,6 +38,10 @@ class Engine {
 
     private function setError($error) {
         $this->_error = $error;
+    }
+
+    public function getPageFile() {
+        return $this->_pageFile;
     }
 
     public function getError() {
