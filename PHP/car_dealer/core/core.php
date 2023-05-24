@@ -1,8 +1,10 @@
 <?php
 
 include_once "init.php";
+include_once "language/language_change_handler.php";
 include_once "class_engine.php";
 $engine = new Engine();
+$engine->setPageTitle($lang["page_title"]);
 
 include_once "pages/header.php";
 

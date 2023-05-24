@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="<?php echo $lang["nav"]["about_us"] ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
   <!-- <link rel="stylesheet" href=<?php echo $fileLocationPath["css"] . "/aos.css"?>> -->
   <link rel="stylesheet" href=<?php echo $fileLocationPath["css"] . "/style.css"?>>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php $engine->getTitle(); ?></title>
+    <title><?php echo $engine->getPageTitle(); ?></title>
 </head>
 <body>
     <?php if ($engine->getPageFile() == "main"):?>
@@ -28,9 +28,9 @@
           </div>
           <nav class="nav" id="nav">
             <?php if ($engine->getPageFile() == "main"): ?>
-              <a class="nav_link active active-mobile" href="?page=main">Sākums</a>
+              <a class="nav_link active active-mobile" href="?page=main"><?php echo $lang["nav"]["about_us"] ?></a>
             <?php else: ?>
-              <a class="nav_link" href="?page=main">Sākums</a>
+              <a class="nav_link" href="?page=main"><?php echo $lang["nav"]["about_us"] ?></a>
             <?php endif; ?>
             <?php if ($engine->getPageFile() == "contacts"): ?>
               <a class="nav_link active active-mobile" href="?page=contacts">Auto pasūtīšana</a>
@@ -41,6 +41,21 @@
               <a class="nav_link active active-mobile" href="?page=used_cars_search">Mazlietoti auto </a>
             <?php else: ?>
               <a class="nav_link" href="?page=used_cars_search">Mazlietoti auto </a>
+            <?php endif; ?>
+            <?php if ($current_lang == "lv"): ?>
+              <a class="nav_link active" href="index.php?lang=lv">LV</a>
+            <?php else: ?>
+              <a class="nav_link" href="index.php?lang=lv">LV</a>
+            <?php endif; ?>
+            <?php if ($current_lang == "ru"): ?>
+              <a class="nav_link active" href="index.php?lang=ru">RU</a>
+            <?php else: ?>
+              <a class="nav_link" href="index.php?lang=ru">RU</a>
+            <?php endif; ?>
+            <?php if ($current_lang == "en"): ?>
+              <a class="nav_link active" href="index.php?lang=en">ENG</a>
+            <?php else: ?>
+              <a class="nav_link" href="index.php?lang=en">ENG</a>
             <?php endif; ?>
           </nav>
           <!--Burger menu-->

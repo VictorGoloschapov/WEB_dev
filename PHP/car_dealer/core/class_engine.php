@@ -11,6 +11,7 @@
 class Engine {
     private $_pageFile = null;
     private $_error = null;
+    private $_pageTitle = null;
 
     public function __construct() {
         if (isset($_GET['page'])) {
@@ -19,7 +20,8 @@ class Engine {
             $this->_pageFile = str_replace("/", "null", $_GET['page']);
             $this->_pageFile = str_replace("", "null", $_GET['page']);
 
-           var_dump($this->_pageFile);
+        //    var_dump($this->_pageFile);
+        // echo $this->_pageFile;
         //    var_dump($_GET);
 
             $this->isTemplateExists();
@@ -34,25 +36,28 @@ class Engine {
         }
     }
 
-    private function setError($error) {
-        $this->_error = $error;
-    }
-
     public function getPageFile() {
         return $this->_pageFile;
+    }
+
+    public function setError($error) {
+        $this->_error = $error;
     }
 
     public function getError() {
         return $this->_error;
     }
 
-    public function getContentPage() {
-        return file_get_contents("pages/page_templates/" . $this->_pageFile . ".php");
+    public function setPageTitle($pageTitle) {
+        $this->_pageTitle = $pageTitle;
     }
 
-    public function getTitle() {
-        global $pageTitles;
-        echo $pageTitles[$this->_pageFile];
+    public function getPageTitle() {
+        return $this->_pageTitle;
+    }
+
+    public function getContentPage() {
+        return file_get_contents("pages/page_templates/" . $this->_pageFile . ".php");
     }
 }
 ?>

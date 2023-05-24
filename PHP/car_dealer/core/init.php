@@ -16,6 +16,6 @@ $pageTitles = array(
 
 // $url = $_SERVER['REQUEST_URI'];
 
-// var_dump($fileLocationPath);
+// var_dump($lang);
 
 ?>
