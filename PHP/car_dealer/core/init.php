@@ -1,21 +1,35 @@
 <?php
+/**
+ * Variables init. Will be used in html templates
+ * 1. css, js, image file location path
+ * 2. text content for page blocks
+ */
 
-//css style location
+/*1.css style location
+===================================*/
 $fileLocationPath = array(
     "css" =>  dirname("assets/css/main.css"),
     "js" => dirname("assets/js/script.js"),
     "images" => dirname("assets/images/"),
 );
 
-//page titles
-$pageTitles = array(
-    "main" => "About us",
-    "contacts" => "Contacts",
-    "used_cars_search" => "Used cars search",
-);
+/*2. text content for page blocks
+===================================*/
+//2.1 page navigation
+$nav = array();
 
-// $url = $_SERVER['REQUEST_URI'];
+//2.2 main page
+$intro = array();
+$features = array();
+$mainContent = array();
 
-// var_dump($lang);
+//2.3 contacts page
+/*array()*/
+
+//2.4 used cars search page
+/*array()*/
+
+//2.5 footer
+$footer = array();
 
 ?>
