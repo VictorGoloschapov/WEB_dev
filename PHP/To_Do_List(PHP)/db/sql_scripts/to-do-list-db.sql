@@ -1,0 +1,2 @@
+CREATE DATABASE ToDoList;
+USE ToDoList;
