@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <?php
-                    include_once("db/db_connection.php");
+                    include_once("db/create_task_list.php");
                 ?>
             </div>
         </div>
