@@ -12,7 +12,8 @@
         <div class="row">
             <div class="col-sm-6">
                 <?php
-                    include_once("db/create_task_list.php");
+                    include_once("task_handler/to-do_form.php");
+                    include_once("task_handler/to_do_list.php");
                 ?>
             </div>
         </div>
