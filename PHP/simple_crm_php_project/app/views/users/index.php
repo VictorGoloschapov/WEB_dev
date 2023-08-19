@@ -33,7 +33,7 @@ ob_start();
 
 <?php $content = ob_get_clean();
 //добавляем шапку, подвал, стили...
-include '';
+include 'app/views/layout.php';
 
 ?>
 
