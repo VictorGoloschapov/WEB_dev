@@ -27,8 +27,10 @@ class Database
     {
         if (!self::$instance)
         {
-            self::$instance = new Database();
+            self::$instance = new Database(); // здесь объект Database
         }
+
+        return self::$instance;
     }
 
     //возврат объета подключения к базе данных
