@@ -22,7 +22,7 @@ class Engine {
 
         //    var_dump($this->_pageFile);
         // echo $this->_pageFile;
-        //    var_dump($_GET);
+           var_dump($_GET);
 
             $this->isTemplateExists();
         } else {
