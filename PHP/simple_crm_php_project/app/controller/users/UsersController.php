@@ -14,5 +14,4 @@ class UsersController
         include "app/views/users/index.php";
     }
 }
-//Пишем с нуля "Mini CRM system" на PHP8 & SQL используя ООП. Часть-1  49:37
 ?>

@@ -8,6 +8,9 @@ class Router
         //если нет страницы, то открываем страницу Home
         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
+        echo $page . "<br>";
+        echo var_dump($_GET) . "<br>";
+
         switch($page)
         {
             case 'users':
@@ -18,7 +21,6 @@ class Router
                 http_response_code(404);
                 echo "page not found";
                 break;
-
         }
     }
 }
