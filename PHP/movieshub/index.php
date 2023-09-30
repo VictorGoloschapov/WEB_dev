@@ -1,5 +1,5 @@
 <?php
 
-echo "first code line of fututure project 'VicFlex'";
+echo "first code line of fututure project 'VicFlix'";
 
 ?>
