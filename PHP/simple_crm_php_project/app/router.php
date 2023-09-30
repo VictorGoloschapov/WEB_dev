@@ -7,7 +7,7 @@ class Router
         //получать адресную строку
         //если нет страницы, то открываем страницу Home
 
-        if (!isset($_GET["page"])) //пока так оставить
+        if (!isset($_GET["page"])) //пока так оставить, так пока в GET ничего не передается
         {
             $_GET["page"] = "users";
             header("Location: index.php?page=users");
