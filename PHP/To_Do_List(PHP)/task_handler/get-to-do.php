@@ -10,7 +10,9 @@ function getTask()
 
     if ($result) {
         if($result->num_rows> 0) {
-        $data['data'] = $result->fetch_all(MYSQLI_ASSOC);
+            $data['data'] = $result->fetch_all(MYSQLI_ASSOC);
+        } else {
+            echo $data['taskMessage'] = "Currently no active tasks";
         }
     }
 

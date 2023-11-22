@@ -1,5 +1,5 @@
 <?php
-function deleteTask() {
+function deleteTaskById() {
     global $conn;
     $data  = [];
 
@@ -8,11 +8,10 @@ function deleteTask() {
 
         $query = "DELETE FROM tasks ";
         $query .= "WHERE id=$id";
-        $result = $conn->query($query);
-        $data = $result->fetch_assoc();
+        $conn->query($query);
+        // $data = $result->fetch_assoc();
 
     }
-
-    return $data;
 }
+
 ?>

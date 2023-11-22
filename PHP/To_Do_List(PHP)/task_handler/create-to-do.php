@@ -5,14 +5,15 @@ function createTask() {
 
     if (isset($_POST['add'])) {
         $task = $_POST['task'];
-        $data['taskMsg'] = '';
+        $data['taskMessage'] = '';
 
         if (empty($task)) {
-            $data['taskMsg'] = "Empty Task Field!";
+            $data['taskMessage'] = "Empty Task Field!";
+            $data['alertMsgStyle'] = "alert-danger";
         }
 
         $validation = false;
-        if(empty($data['taskMsg'])) {
+        if(empty($data['taskMessage'])) {
             $validation = true;
         }
 
@@ -24,10 +25,12 @@ function createTask() {
             $result = $conn->query($query);
 
             if ($result) {
-                $data['success'] = "Task is added successfully";
+                $data['taskMessage'] = "Task is added successfully";
+                $data['alertMsgStyle'] = "alert-success";
             }
         }
 
+        // var_dump($data);
         return $data;
     }
 }

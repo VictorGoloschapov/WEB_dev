@@ -1,7 +1,7 @@
 <?php
 function editTaskById(){
-    global $conn;
-    $data=[];
+      global $conn;
+      $data=[];
 
     if(isset($_GET['edit-task']) && !empty($_GET['edit-task']) ) {
 
@@ -15,6 +15,7 @@ function editTaskById(){
         $data = $result->fetch_assoc();
     }
 
+    // var_dump($data);
     return $data;
-  }
+}
 ?>
