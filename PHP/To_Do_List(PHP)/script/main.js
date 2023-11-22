@@ -12,15 +12,10 @@ parentElemContainer.addEventListener("click", function(e) {
 });
 
 if (allertMessage && closeButton) {
-    closeButton.addEventListener("click", closeAlert);
+    closeButton.addEventListener("click", closeAlertMessage);
 }
 
-
-function closeAlert() {
+function closeAlertMessage() {
     allertMessage.classList.toggle("d-none");
 }
 
-// console.log(allertMessage);
-// console.log(closeButton);
-
-// // console.log(parentElemContainer);

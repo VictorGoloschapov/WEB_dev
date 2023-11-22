@@ -12,7 +12,10 @@ function getTask()
         if($result->num_rows> 0) {
             $data['data'] = $result->fetch_all(MYSQLI_ASSOC);
         } else {
-            echo $data['taskMessage'] = "Currently no active tasks";
+            $data['taskMessage'] = "Currently no active tasks";
+            echo "<div class=\"alert alert-primary\" role=\"alert\">";
+            echo $data['taskMessage'];
+            echo "</div>";
         }
     }
 
