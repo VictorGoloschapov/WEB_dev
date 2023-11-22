@@ -8,9 +8,9 @@
     <title>To Do List</title>
 </head>
 <body>
-    <div class="container  my-5">
-        <h2>To Do List</h2>
-        <div class="row">
+    <div class="container my-5">
+        <h1 class="text-center mb-5">To Do List</h1>
+        <div class="row justify-content-center">
             <div class="col-sm-6">
                 <?php
                 include_once("db/db_connection.php");
