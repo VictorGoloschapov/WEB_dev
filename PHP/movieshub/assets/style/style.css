@@ -1,3 +1,59 @@
-* {
-    color: red;
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*register page*/
+
+.signInContainer {
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    background-color: #fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 100%;
+    max-width: 450px;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
+}
+
+/*register page - form*/
+.column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"] {
+    margin: 10px 0;
+
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+.column form input[type="submit"] {
+    height: 36px;
+    width: 88px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+
+    font-weight: 500;
+    font-size: 16px;
 }
