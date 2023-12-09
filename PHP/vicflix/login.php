@@ -1,5 +1,5 @@
 <?php
-    require_once "includes/setup.php";
+    require_once "includes/pages_setup.php";
 
     if (isset($_POST["submitButton"])) {
         $username = FormSanitizer::sanitizeFormUsername($_POST["username"]);
