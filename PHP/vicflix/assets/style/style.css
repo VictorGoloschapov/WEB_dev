@@ -122,3 +122,11 @@ body {
     font-weight: 400;
     color: #000;
 }
+
+/* register page - error message*/
+.error_message {
+    color: #f00;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}

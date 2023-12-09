@@ -1,9 +1,5 @@
 <?php
-    require_once "includes/config.php";
-    require_once "includes/classes/FormSanitizer.php";
-    require_once "includes/classes/Account.php";
-
-    $account = new Account($con);
+    require_once "includes/setup.php";
 
     if (isset($_POST["submitButton"])) {
         $firstName = FormSanitizer::sanitizeFormString($_POST["firstName"]);
@@ -14,42 +10,34 @@
         $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
         $password2 = FormSanitizer::sanitizeFormPassword($_POST["password2"]);
 
-        echo "Name: $firstName<br>";
-        echo "Lastname: $lastName<br>";
-        echo "email: $email<br>";
-        echo "confirm email: $email2<br>";
-        echo "Password: $password<br>";
-        echo "confirm Password: $password2<br>";
+        $success = $account->register($firstName, $lastName, $username, $email, $email2, $password, $password2);
+
+        if ($success) {
+            $_SESSION["userLoggedIn"] = $username;
+            header("Location: index.php"); // if login/register succesfull - redirect to index page
+        }
+    }
+
+    function getInputValue($name) {
+        if (isset($_POST[$name])) {
+            echo $_POST[$name];
+        }
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
-    <title>Welcome to VicFlix</title>
-</head>
+<?php include $tpl_header?>
 <body>
     <div class="signInContainer">
         <div class="column">
             <div class="column__logo">
-                <a href="#">vicflix</a>
+                <a href="#"><?=$site_logo?></a>
             </div>
             <div class="header">
-                <h3 class="header__title">Sign Up</h3>
-                <span>to continue to VicFlix</span>
+                <h3 class="header__title"><?=$titles["register_form"]?></h3>
+                <span>to continue to <?=$site_logo?></span>
             </div>
             <form method="POST">
-                <input type="text" name="firstName" placeholder="First Name" required>
-                <input type="text" name="lastName" placeholder="Last Name" required>
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="email" name="email2" placeholder="Confirm Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="password" name="password2" placeholder="Confirm Password" required>
-                <input type="submit" name="submitButton" value="submit">
+                <?php include $tpl_registration_form?>
             </form>
             <a href="login.php" class="signin_message">Already have an account? Sign in here</a>
         </div>
