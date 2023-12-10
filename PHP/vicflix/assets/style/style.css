@@ -11,6 +11,11 @@ body {
 *::after {
     box-sizing: border-box;
 }
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 /*register page*/
 
 .signInContainer {
