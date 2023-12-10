@@ -36,7 +36,9 @@ body {
 
     box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px;
 }
+
 /*register page - logo */
+
 .column__logo a {
     color: #c90b0b;
     text-transform: uppercase;
@@ -44,6 +46,7 @@ body {
     font-weight: 700;
     font-size: 24px;
 }
+
 /*register page - header */
 
 .column .header {
@@ -121,6 +124,7 @@ body {
 }
 
 /* register page - sign in link */
+
 .signin_message {
     text-decoration: none;
     font-size: 14px;
@@ -129,9 +133,79 @@ body {
 }
 
 /* register page - error message*/
+
 .error_message {
     color: #f00;
     font-size: 14px;
     font-weight: 400;
     text-align: center;
 }
+
+/*main page - preview video/image */
+.preview__container {
+    position: relative;
+    display: flex;
+}
+.preview__image,
+.preview__video {
+    width: 100%;
+}
+
+.preview_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*preview container - main details */
+.preview_overlay .main_details {
+    position: relative;
+    top: 35%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+    color: #fff;
+}
+
+.preview_overlay .main_details__title {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+.preview_overlay .main_details__subtitle {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+/*preview container - buttons */
+.main_details button {
+    min-width: 150px;
+    padding: 0 38px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    height: 50px;
+    max-height: 50px;
+
+    background-color: rgba(51, 51, 51, 0.4);
+    border: 0;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 18px;
+
+    transition: all linear 0.2s;
+    cursor: pointer;
+}
+
+button i {
+    color: inherit;
+}
+
+.main_details button:hover {
+    background-color: #e6e6e6;
+    color: #000;
+}
+

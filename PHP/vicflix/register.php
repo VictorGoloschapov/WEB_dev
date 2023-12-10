@@ -26,7 +26,6 @@
 ?>
 
 <?php include $tpl_header?>
-<body>
     <div class="signInContainer">
         <div class="column">
             <div class="column__logo">
@@ -42,5 +41,3 @@
             <a href="login.php" class="signin_message">Already have an account? Sign in here</a>
         </div>
     </div>
-</body>
-</html>
