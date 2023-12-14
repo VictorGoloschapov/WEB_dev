@@ -17,4 +17,5 @@ $titles = array(
 $tpl_header = "includes/pages_tpl/header.php";
 $tpl_login_form = "includes/pages_tpl/login_form.php";
 $tpl_registration_form = "includes/pages_tpl/registration_form.php";
+$tpl_footer = "includes/pages_tpl/footer.php"
 ?>

@@ -15,5 +15,6 @@ $userLoggedIn = $_SESSION["userLoggedIn"];
 $preview = new previewProvider($con, $userLoggedIn);
 $preview->createPreviewVideo(null);
 
+include_once $tpl_footer;
 
 ?>

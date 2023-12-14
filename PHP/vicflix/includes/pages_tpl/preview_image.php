@@ -18,4 +18,4 @@
 </div>
 
 
-<script src="assets/js/main.js"></script> <!--keep here until footer will be created-->
+<!-- <script src="assets/js/main.js"></script> keep here until footer will be created -->
