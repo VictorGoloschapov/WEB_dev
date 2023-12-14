@@ -12,12 +12,33 @@ body {
     box-sizing: border-box;
 }
 
+h3 {
+    color: #e5e5e5;
+}
+
+a h3:hover {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
 .text-uppercase {
     text-transform: uppercase;
 }
 
-/*register page*/
+/*page wrapper conteiner*/
 
+
+/*register page*/
+.wrapper {
+    min-width: 1050px;
+    min-height: 100%;
+    background-color: #141414;
+
+    color: #fff;
+}
 .signInContainer {
     background-color: #efefee;
     height: 100vh;
@@ -146,6 +167,20 @@ body {
     position: relative;
     display: flex;
 }
+
+.preview__container.small {
+    display: inline-flex;
+    width: 230px;
+    height: 129px;
+    margin-right: 4px;
+}
+
+.preview__container.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .preview__image,
 .preview__video {
     width: 100%;
@@ -165,8 +200,6 @@ body {
     margin-left: 50px;
     display: flex;
     flex-direction: column;
-
-    color: #fff;
 }
 
 .preview_overlay .main_details__title {
@@ -209,3 +242,15 @@ button i {
     color: #000;
 }
 
+/*movie categories */
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.entities {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}

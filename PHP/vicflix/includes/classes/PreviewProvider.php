@@ -22,14 +22,22 @@ class PreviewProvider {
         return include "includes/pages_tpl/preview_image.php";
     }
 
+    public function createEntityPreviewSquare($entity) {
+        $id = $entity->getId();
+        $thumbnail = $entity->getThumbnail();
+        $name = $entity->getName();
+
+        return "<a href=\"entity.php?id=$id\">
+                    <div class=\"preview__container small\">
+                        <img src=\"$thumbnail\" title=\"$name\">
+                    </div>
+                </a>";
+    }
+
     private function getRandomEntity() {
-        //will select random entities from DB
-        $query = $this->con->prepare("SELECT * FROM entities ORDER BY RAND() LIMIT 1");
-        $query->execute();
+        $entity = EntityProvider::getEntities($this->con, null, 1);
 
-        $row = $query->fetch(PDO::FETCH_ASSOC);
-
-        return new Entity($this->con, $row);
+        return $entity[0];
     }
 }
 ?>
