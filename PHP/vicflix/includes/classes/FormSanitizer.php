@@ -2,8 +2,8 @@
 class FormSanitizer {
     //will not create an instance object, just call function when sanitizing input field
     public static function sanitizeFormString($inputText) {
-        $inputText = self::removeHtmlSpecialChars($inputText);
         $inputText = self::removeTags($inputText);
+        $inputText = self::removeHtmlSpecialChars($inputText);
         $inputText = trim($inputText);
         $inputText = strtolower($inputText);
         $inputText = ucfirst($inputText);
@@ -11,16 +11,16 @@ class FormSanitizer {
     }
 
     public static function sanitizeFormUsername($inputText) {
-        $inputText = self::removeHtmlSpecialChars($inputText);
         $inputText = self::removeTags($inputText);
+        $inputText = self::removeHtmlSpecialChars($inputText);
         $inputText = trim($inputText);
         $inputText = strtolower($inputText);
         return $inputText;
     }
 
     public static function sanitizeFormEmail($inputText) {
-        $inputText = self::removeHtmlSpecialChars($inputText);
         $inputText = self::removeTags($inputText);
+        $inputText = self::removeHtmlSpecialChars($inputText);
         $inputText = trim($inputText);
         $inputText = strtolower($inputText);
         return $inputText;
@@ -28,6 +28,7 @@ class FormSanitizer {
 
     public static function sanitizeFormPassword($inputText) {
         $inputText = self::removeTags($inputText);
+        $inputText = trim($inputText);
         return $inputText;
     }
 
