@@ -4,6 +4,8 @@ html {
 
 body {
     margin: 0;
+
+    background-color: #141414;
 }
 
 *,
@@ -253,4 +255,18 @@ button i {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+}
+
+.preview_categories {
+    padding: 0 50px;
+}
+
+/*error message */
+.error_banner {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+
+    text-align: center;
+    font-size: 18px;
 }
