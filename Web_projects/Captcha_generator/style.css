@@ -110,6 +110,7 @@ p {
     color: #6b6b6b;
     font-size: 22px;
     pointer-events: none;
+    /* letter-spacing: 7px; */
 }
 
 .captch_input input:focus {
