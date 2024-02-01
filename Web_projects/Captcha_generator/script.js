@@ -18,15 +18,39 @@ let generateCaptcha = () => {
 
 let refreshButtonClick = () => {
     generateCaptcha();
+    captchaInputBox.value = "";
+    captchaKeyUpValidate();
 };
 
 let captchaKeyUpValidate = () => {
+    submitButton.classList.toggle("disabled", !captchaTextBox.value);
 
+    if (captchaInputBox.value == "") {
+        message.classList.remove("active");
+    }
+};
+
+//validate entered captcha
+let submitBtnClick = () => {
+    //join the letter in array, remove blanks in string
+    captchaText = captchaText.split("")
+    .filter(char => char !== " ")
+    .join("");
+
+    message.classList.add("active");
+    if (captchaInputBox.value == captchaText) {
+        message.textContent = "Entered captcha is correct";
+        message.style.color = "#826afb";
+    } else {
+        message.textContent = "Entered captcha is not correct";
+        message.style.color = "#ff2525";
+    }
 };
 
 //add event listener to refresh button, captchaInputBox
 refreshButton.addEventListener("click", refreshButtonClick);
 captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
+submitButton.addEventListener("click", submitBtnClick);
 
 //Generates captcha when page will load
 generateCaptcha();

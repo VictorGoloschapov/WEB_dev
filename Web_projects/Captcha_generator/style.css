@@ -124,6 +124,10 @@ p {
     color: #826afb;
 }
 
+.message.active {
+    display: block;
+}
+
 .button button {
     background-color: #826afb;
     color: #fff;
@@ -132,4 +136,9 @@ p {
 
 .button button:active {
     transform: scale(0.99);
+}
+
+.button.disabled button {
+    opacity: 0.6;
+    pointer-events: none;
 }
