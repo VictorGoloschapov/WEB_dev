@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b97f93fbd.js" crossorigin="anonymous"></script>
     <title>Captcha Generator</title>
 </head>
 <body>
-
+    <div class="container">
+        <header class="captcha_container_header text__center">Captcha Generator</header>
+        <div class="input_field captch_box">
+            <input type="text" value="5  x  8  p  0" disabled>
+            <button class="refresh_button">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+        </div>
+        <div class="input_field captch_input">
+            <input type="text" placeholder="Enter captcha">
+        </div>
+        <div class="message">Entered captcha is correct</div>
+        <div class="input_field button">
+            <button>Submit Captcha</button>
+        </div>
+    </div>
 </body>
 </html>
