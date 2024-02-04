@@ -51,17 +51,6 @@ p {
 }
 
 /*Sidebar*/
-.menu-content {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin-top: 40px;
-}
-
-.menu-items {
-    list-style: none;
-}
-
 .sidebar {
     position: fixed;
     height: 100%;
@@ -72,19 +61,44 @@ p {
 }
 
 .logo {
-    padding: 0 15px;
-
+    display: inline-block;
     font-size: 25px;
+    padding: 0 15px;
+    margin-bottom: 40px;
 }
 
 .sidebar a {
     color: #fff;
     text-decoration: none;
 }
+
+.menu-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    overflow-y: scroll;
+}
+
+.menu-content::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-items {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.submenu-active .menu-items{
+    transform: translateX(-59%);
+}
+
 .menu-title {
-    padding: 15px 20px;
     color: #fff;
     font-size: 14px;
+    padding: 15px 20px;
 }
 
 .item a,
@@ -94,12 +108,17 @@ p {
     width: 100%;
 
     border-radius: 12px;
-    transition: background-color 0.1s linear;
+    transition: background-color .2s linear;
+}
+
+.item i {
+    font-size: 12px;
 }
 
 .item a:hover,
-.submenu-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.submenu-item:hover,
+.submenu .menu-title:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .submenu-item {
@@ -112,11 +131,67 @@ p {
 }
 
 .submenu {
+    display: none;
+    height: calc(100% + 100vh);
+    position: absolute;
+    right: calc(-100% - 26px);
+    top: 0;
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    right: calc(-100% - 26px);
 
     background-color: #11101d;
+}
+
+/*only if class show-submenu added*/
+.show-submenu ~ .submenu {
+    display: block;
+}
+
+.submenu .menu-title {
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.submenu .menu-title i {
+    margin-right: 10px;
+}
+
+/*navbar*/
+.navbar,
+.main {
+    left: 260px;
+    width: calc(100% - 260px);
+
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.sidebar.close ~ .navbar,
+.sidebar.close ~ .main {
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    padding: 15px 20px;
+
+    background-color: #4070f4;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.navbar #sidebar-close {
+    cursor: pointer;
+}
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: #e7f2fd;
+    z-index: 100;
 }
