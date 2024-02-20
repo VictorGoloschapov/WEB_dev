@@ -305,3 +305,8 @@ button i {
     color: #fff;
     white-space: normal;
 }
+
+/*Video player*/
+.watch_container video {
+    width: 100%;
+}

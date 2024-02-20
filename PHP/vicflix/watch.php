@@ -11,3 +11,10 @@ if (!isset($_GET['id'])) {
 $video = new Video($con, $_GET['id']);
 $video->incrementViews();//create video views count
 ?>
+
+<!--Video player-->
+<div class="watch_container">
+    <video controls autoplay>
+        <source src="<?php echo $video->getFilePath(); ?>" type="video/mp4">
+    </video>
+</div>
