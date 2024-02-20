@@ -9,5 +9,5 @@ if (!isset($_GET['id'])) {
 
 #create video object using page id
 $video = new Video($con, $_GET['id']);
-$video->incrementViews();
+$video->incrementViews();//create video views count
 ?>
