@@ -24,7 +24,7 @@ function previewEnded() {
     $(".preview__image").toggle();
 }
 
-function goBack() {
+function goBack() {//navigate back
     window.history.back();
 }
 

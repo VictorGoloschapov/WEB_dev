@@ -10,16 +10,12 @@
     </video>
 </div>
 <script>
-    initVideo();
-
-    function initVideo() {
+    (function initVideo() {
         startHideTimer();
-    }
+    })();
 
     function startHideTimer() {
         let timeout = null;
-
-        console.log(timeout);
 
         //moving mouse arround the document page, do code in function
         $(document).on("mousemove", function() {
