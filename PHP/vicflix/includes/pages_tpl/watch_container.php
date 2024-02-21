@@ -10,11 +10,7 @@
     </video>
 </div>
 <script>
-    (function initVideo() {
-        startHideTimer();
-    })();
-
-    function startHideTimer() {
+    (function startHideTimer() {
         let timeout = null;
 
         //moving mouse arround the document page, do code in function
@@ -26,5 +22,5 @@
                 $(".watch_nav").fadeOut();
             }, 2000);
         })
-    }
+    })();
 </script>
