@@ -1,6 +1,6 @@
 <?php
-require_once "includes/pages_setup.php";
 require_once "data_config.php";
+require_once "includes/pages_setup.php";
 include_once "includes/pages_tpl/header.php";
 
 if (!isset($_GET['id'])) {
@@ -10,11 +10,8 @@ if (!isset($_GET['id'])) {
 #create video object using page id
 $video = new Video($con, $_GET['id']);
 $video->incrementViews();//create video views count
-?>
 
-<!--Video player-->
-<div class="watch_container">
-    <video controls autoplay>
-        <source src="<?php echo $video->getFilePath(); ?>" type="video/mp4">
-    </video>
-</div>
+include_once $tpl_watch_container;
+
+include_once $tpl_footer;
+?>
