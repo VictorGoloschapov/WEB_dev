@@ -10,17 +10,36 @@
     </video>
 </div>
 <script>
-    (function startHideTimer() {
+    initVideo("<?php echo $video->getId() ?>", "<?php echo $userLoggedIn ?>")
+
+    function initVideo(videoId, username) {
+        console.log(videoId);
+        console.log(username);
+        startHideTimer();
+        updateProgressTimer(videoId, username);
+
+    }
+
+    function updateProgressTimer(videoId, username) {
+        addDuration(videoId, username);
+    }
+
+    function addDuration(videoId, username) {
+        $.post("ajax/add_duration.php", function(data) {
+            console.log(data);
+        })
+    }
+
+    function startHideTimer() {
         let timeout = null;
 
         //moving mouse arround the document page, do code in function
         $(document).on("mousemove", function() {
             clearTimeout(timeout); //clear timer when mouse is moving
-            console.log($(".watch_nav"));
             $(".watch_nav").fadeIn();
             timeout = setTimeout(function() {
                 $(".watch_nav").fadeOut();
             }, 2000);
         })
-    })();
+    }
 </script>
