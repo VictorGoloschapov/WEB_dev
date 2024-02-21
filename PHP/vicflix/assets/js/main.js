@@ -1,8 +1,6 @@
 let volumeBtn = document.getElementById("volume_btn");
 let backButton = document.querySelector(".video_controls button");
 
-console.log(backButton);
-
 if (volumeBtn) {
     volumeBtn.addEventListener("click", function() {
         volumeToggle(this);
@@ -29,3 +27,5 @@ function previewEnded() {
 function goBack() {
     window.history.back();
 }
+
+
