@@ -32,6 +32,55 @@ a {
 
 /*page wrapper conteiner*/
 
+/*header*/
+.top_bar {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    width: 100%;
+    height: 70px;
+    transition: background-color 0.2s linear;
+}
+
+.top_bar.scrolled {
+    background-color: #141414;
+    transition: background-color 0.2s linear;
+}
+
+.top_bar img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav_links a {
+    margin-left: 20px;
+
+    color: #fff;
+    font-size: 14px;
+}
+
+.right_items {
+    flex: 1;
+
+    text-align: right;
+}
+
+.right_items i {
+    margin-left: 10px;
+
+    color: #fff;
+    font-size: 20px;
+}
 
 /*register page*/
 .wrapper {

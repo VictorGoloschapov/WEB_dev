@@ -1,6 +1,12 @@
 let volumeBtn = document.getElementById("volume_btn");
 let backButton = document.querySelector(".video_controls button");
 
+//toogle black background color to header on croll
+$(document).scroll(function() {
+    let isScrolled = $((this)).scrollTop() > $(".top_bar").height();
+    $(".top_bar").toggleClass("scrolled", isScrolled);
+});
+
 if (volumeBtn) {
     volumeBtn.addEventListener("click", function() {
         volumeToggle(this);

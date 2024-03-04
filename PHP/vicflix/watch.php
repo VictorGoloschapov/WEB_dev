@@ -1,4 +1,5 @@
 <?php
+$hideNav = true;
 require_once "data_config.php";
 require_once "includes/pages_setup.php";
 include_once "includes/pages_tpl/header.php";
