@@ -80,3 +80,25 @@ function startHideTimer() {
     })
 }
 
+//restart video
+let restartButton = document.querySelector(".up_next button");
+let playNextButton = document.querySelector(".up_next_container button");
+let playButton = document.querySelector(".preview_overlay .buttons button");
+let video = document.querySelector(".video_item");
+
+restartButton.addEventListener("click", restartVideo);
+video.addEventListener("ended", showUpNext);
+
+function restartVideo() {
+    $("video")[0].currentTime = 0; //js video object
+    $("video")[0].play();
+    $(".up_next").fadeOut();
+}
+
+function watchVideo(videoId) {
+    window.location.href = "watch.php?id=" + videoId;
+}
+
+function showUpNext() {
+    $(".up_next").fadeIn();
+}

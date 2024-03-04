@@ -5,50 +5,26 @@
         </button>
         <h1><?php echo $video->getTitle(); ?></h1>
     </div>
-    <video controls autoplay>
+    <div class="video_controls up_next" style="display:none">
+        <button><i class="fa-solid fa-redo"></i></button>
+        <div class="up_next_container">
+            <h2>Up next:</h2>
+            <h3><?php echo $upNextVideo->getTitle() ?></h3>
+            <h3><?php echo $upNextVideo->getSeasonAndEpisode() ?></h3>
+
+            <button class="play_next">
+                <i class="fa-solid fa-play"></i> Play
+            </button>
+        </div>
+    </div>
+    <video class="video_item" controls autoplay>
         <source src="<?php echo $video->getFilePath(); ?>" type="video/mp4">
     </video>
 </div>
-<script src="assets/js/video.js">
-    //keep below code utill the end of the project
-
-
-
-    // initVideo("<?php echo $video->getId() ?>", "<?php echo $userLoggedIn ?>");
-
-    // function initVideo(videoId, username) {
-    //     console.log(videoId);
-    //     console.log(username);
-    //     startHideTimer();
-    //     updateProgressTimer(videoId, username);
-
-    // }
-
-    // function updateProgressTimer(videoId, username) {
-    //     addDuration(videoId, username);
-    // }
-
-    // function addDuration(videoId, username) {
-    //     $.post("ajax/add_duration.php", {"videoId": videoId, "username": username}, function(data) {
-    //         if(data !== null && data !== "") {
-    //             alert(data);
-    //         }
-    //     })
-    // }
-
-    // function startHideTimer() {
-    //     let timeout = null;
-
-    //     //moving mouse arround the document page, do code in function
-    //     $(document).on("mousemove", function() {
-    //         clearTimeout(timeout); //clear timer when mouse is moving
-    //         $(".watch_nav").fadeIn();
-    //         timeout = setTimeout(function() {
-    //             $(".watch_nav").fadeOut();
-    //         }, 2000);
-    //     })
-    // }
-</script>
+<script src="assets/js/video.js"></script>
 <script>
     initVideo("<?php echo $video->getId() ?>", "<?php echo $userLoggedIn ?>");
+    playNextButton.addEventListener("click", function() {
+        watchVideo(<?php echo $upNextVideo->getId() ?>);
+    });
 </script>

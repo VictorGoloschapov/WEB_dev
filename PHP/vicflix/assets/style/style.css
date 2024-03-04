@@ -286,6 +286,7 @@ button i {
 }
 
 .episodeContainer .contents {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 230px;
@@ -304,6 +305,15 @@ button i {
 
     color: #fff;
     white-space: normal;
+}
+
+.seen {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    color: #2ecc71;
+    font-size: 26px;
 }
 
 /*Video player*/
@@ -335,3 +345,21 @@ button i {
     cursor: pointer;
 }
 
+/*watch container*/
+.up_next {
+    height: 100%;
+    justify-content: center;
+}
+
+.up_next_container button {
+    padding: 0;
+}
+
+.up_next_container h2,
+.up_next_container h3 {
+    color: #fff;
+}
+
+.watch_nav {
+    z-index: 2;
+}

@@ -10,6 +10,7 @@ if (!isset($_GET['id'])) {
 #create video object using page id
 $video = new Video($con, $_GET['id']);
 $video->incrementViews();//create video views count
+$upNextVideo = VideoProvider::getUpNext($con, $video);
 
 include_once $tpl_watch_container;
 

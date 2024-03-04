@@ -19,6 +19,14 @@ class PreviewProvider {
         $thumbnail = $entity->getThumbnail();
         $preview = $entity->getPreview();
 
+        $videoId = VideoProvider::getEntityVideoForUser($this->con, $id,
+        $this->username);
+        $video = new Video($this->con, $videoId);
+        $inProgress = $video->isInProgress($this->username);
+        $playButtonText = $inProgress ? "Continue watching" : "Play";
+        $seasonEpisode = $video->getSeasonAndEpisode();
+        $subHeading = $video->isMovie() ? "" : $seasonEpisode;
+
         return include "includes/pages_tpl/preview_image.php";
     }
 
