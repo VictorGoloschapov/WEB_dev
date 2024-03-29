@@ -5,7 +5,7 @@
         $username = FormSanitizer::sanitizeFormUsername($_POST["username"]);
         $password = FormSanitizer::sanitizeFormPassword($_POST["password"]);
 
-        $success = $account->login($username, $password);
+        $success = $account->login($username, $password); //call login function, which will return bool true or false
 
         if ($success) {
             $_SESSION["userLoggedIn"] = $username;
