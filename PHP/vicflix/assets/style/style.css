@@ -412,3 +412,23 @@ button i {
 .watch_nav {
     z-index: 2;
 }
+
+/*search page*/
+.search_container {
+    height: 100vh;
+}
+.text_box_container {
+    padding: 100px 50px;
+}
+
+.search_input {
+    height: 50px;
+    width: 600px;
+    padding: 5px 10px;
+
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #dedede;
+    background-color: transparent;
+    border-radius: 3px;
+}
