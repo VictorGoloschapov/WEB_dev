@@ -20,5 +20,8 @@
         <a href="profile.php">
             <i class="fa-solid fa-user"></i>
         </a>
+        <a href="logout.php">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
     </div>
 </header>
